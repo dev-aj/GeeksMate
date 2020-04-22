@@ -5,10 +5,8 @@ import PropTypes from 'prop-types';
 
 export const Landing = ({ auth: { isAuthenticated } }) => {
   if (isAuthenticated) {
-    console.log('isAuthenticated: ', isAuthenticated);
     return <Redirect to='/dashboard' />;
   }
-  console.log('flag: ', isAuthenticated);
   return (
     <section className='landing'>
       <div className='dark-overlay'>
