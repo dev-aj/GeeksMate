@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://geeks:geeks321@cluster0-72qk1.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "theShadowofSecret",
+    "githubClientId": "757add81212b177a12a5",
+    "githubClientSecret": "b079e255e82eee79e1dd8a19c5c90e3e3da49ffe"
+}
