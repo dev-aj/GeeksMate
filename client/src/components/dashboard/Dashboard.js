@@ -7,6 +7,7 @@ import { getCurrentProfile, deleteAccount } from '../../actions/profile';
 import DashboardActions from './DashboardActions';
 import Experience from './Experience';
 import Education from './Education';
+//import Profiles from '../profiles/Profiles';
 
 const Dashboard = ({
   getCurrentProfile,
