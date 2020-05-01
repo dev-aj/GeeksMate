@@ -20,6 +20,7 @@ export const getCurrentProfile = () => async (dispatch) => {
       payload: res.data,
     });
   } catch (err) {
+    dispatch({ type: CLEAR_PROFILE });
     dispatch({
       type: PROFILE_ERROR,
       payload: { msg: err.response.statusText, status: err.response.status },
@@ -48,7 +49,6 @@ export const getProfiles = () => async (dispatch) => {
 
 export const getProfileById = (userId) => async (dispatch) => {
   try {
-    console.log('userId: ', `/api/profile/user/${userId}`);
     const res = await axios.get(`/api/profile/user/${userId}`);
     dispatch({
       type: GET_PROFILE,
@@ -76,6 +76,7 @@ export const getRepos = (username) => async (dispatch) => {
       type: PROFILE_ERROR,
       payload: { msg: err.response.statusText, status: err.response.status },
     });
+    dispatch(setAlert('No Repo found!!', 'danger'));
   }
 };
 
